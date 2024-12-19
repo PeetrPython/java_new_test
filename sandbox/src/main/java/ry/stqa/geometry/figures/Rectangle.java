@@ -2,10 +2,11 @@ package ry.stqa.geometry.figures;
 
 public class Rectangle {
     public static void printRectangleArea(double a, double b) {
-        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + rectangleArea(a, b));
+        var text = String.format("Площадь прямоугольника со сторонами %.2f и %.2f = %.2f ", a, b, rectangleArea(a, b));
+        System.out.println(text);
     }
 
-    private static double rectangleArea(double a, double b) {
+    public static double rectangleArea(double a, double b) {
         return a * b;
     }
 }
