@@ -22,4 +22,16 @@ public class SquareTests {
     void canCalculateTriangle(){
 
     }
+
+    @Test
+    void cannotCreateSquareWithNegativeSide() {
+        try {
+            new Square(-5.0);
+            Assertions.fail();
+        }catch (IllegalArgumentException exception) {
+            //ok
+        }
+
+
+    }
 }
