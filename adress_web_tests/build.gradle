@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // Selenium
+    implementation 'org.seleniumhq.selenium:selenium-java:4.27.0'
+
+    // Дополнительные зависимости (если нужно):
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.10.0'
+    // implementation 'org.seleniumhq.selenium:selenium-firefox-driver:4.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}

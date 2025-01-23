@@ -23,4 +23,9 @@ public class Hello {
         var z = x / y;
         return z;
     }
+
+    private static int {
+        int i = 0b111;
+        System.out.println(i);
+    }
 }

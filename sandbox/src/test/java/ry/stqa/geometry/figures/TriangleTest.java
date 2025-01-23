@@ -18,6 +18,21 @@ public class TriangleTest {
         Assertions.assertEquals(12, new Triangle(3.0, 4.0, 5.0).perimeter());
     }
 
+    @Test
+    void cannotCreateTriangleWithNegativeSide() {
+        try {
+            new Triangle(3.0, 4.0, 0.0);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {
+            //ok
+        }
+    }
 
+    @Test
+    void TestPass() {
+        var t1 = new Triangle(3.0, 4.0, 5.0);
+        var t2 = new Triangle(4.0,5.0, 3.0);
+        Assertions.assertTrue(t1.equals(t2));
+    }
 
 }

@@ -1,5 +1,7 @@
 package ry.stqa.geometry.figures;
 
+import java.util.Objects;
+
 public record Rectangle (
 
     double a,
@@ -18,5 +20,19 @@ public record Rectangle (
 
     public static double rectangleArea(double a, double b) {
         return a * b;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return (Double.compare(rectangle.a, this.a) == 0 && Double.compare(rectangle.b, this.b) == 0)
+                || (Double.compare(rectangle.a, this.b) == 0 && Double.compare(rectangle.b, this.a) == 0);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(a, b);
     }
 }

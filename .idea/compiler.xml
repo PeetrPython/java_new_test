@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel target="17">
+      <module name="addressbook_web_tests" target="23" />
+      <module name="addressbook_web_tests.main" target="23" />
+      <module name="addressbook_web_tests.test" target="23" />
+    </bytecodeTargetLevel>
   </component>
 </project>
