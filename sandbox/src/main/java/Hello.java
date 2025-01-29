@@ -24,8 +24,4 @@ public class Hello {
         return z;
     }
 
-    private static int {
-        int i = 0b111;
-        System.out.println(i);
-    }
 }
